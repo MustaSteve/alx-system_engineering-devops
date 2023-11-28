@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# install nginx in the remote server
+
+sudo apt-get update -y
+sudo apt-get install nginx -y
+
+# Create a custom HTML file with "Hello World!"
+echo "Hello World!" | sudo tee /var/www/html/index.html
+
+# Restart Nginx (without systemctl)
+sudo /etc/init.d/nginx restart
